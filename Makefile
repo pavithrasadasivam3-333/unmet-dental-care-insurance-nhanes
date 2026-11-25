@@ -15,7 +15,7 @@ data/DEMO_I.XPT data/HIQ_I.XPT data/OHQ_I.XPT:
 
 .PHONY: install clean
 install:
-	Rscript -e "install.packages(c('haven','dplyr','srvyr','ggplot2','knitr','rmarkdown'))"
+	Rscript -e "renv::restore(prompt = FALSE)"
 
 clean:
 	rm -f output/table1.rds output/figure1.png output/figure1_data.rds data/nhanes_clean.rds report.html
